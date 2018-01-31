@@ -1,0 +1,36 @@
+this will be a test of our homework assignment for jan 31
+
+
+This is an R notebook document created by Russell Turner for the bio 812 class homework due Jan 31 2018.
+
+  * File creation date: `r Sys.Date()`
+  * `r R.version.string`
+  * `ggplot2` package version `r packageVersion("ggplot2")`
+  
+  
+```{r load packages, include=FALSE}
+require(ggplot2)
+```
+
+# Assignment Details
+1. Use an R markdown file to create a clean, attractive 1-page report, focusing on a single visualization with ggplot(). The details of the report don’t matter (e.g. real vs. simulated data).
+2. Use custom formatting to make the most attractive report you can make using R markdown and ggplot().
+3. **You will be marked on:**
+  i) aesthetic (clean & clear, with no unnecessary ‘ink’)
+  ii) the application of methods used in Rmarkdown and ggplot()
+  iii) clarity and readability of .Rmd code, and file knits without error.
+
+# Plot Iris Dataset Variables
+
+```{r model and plot, echo=FALSE, results="hide"}
+mod1<- lm(Petal.Width~Sepal.Length , data=iris)
+summary(mod1)
+ggplot(iris, aes(x= Sepal.Length, y = Petal.Width))+
+  geom_point()+
+  geom_smooth(method= "lm", , colour= "black", se=FALSE)+
+  labs(x= "Sepal Length (cm)", y= "Petal Width (cm)")+
+  theme_classic()
+```
+
+**Figure 1.** The Sepal Length (cm) plotted against Petal Width (cm) (*n =* 150) for three different species  *Iris setosa, versicolor* and *virginica* dataset in R. Black line represents a linear model of 
+
