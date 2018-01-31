@@ -34,3 +34,4 @@ ggplot(iris, aes(x= Sepal.Length, y = Petal.Width))+
 
 **Figure 1.** The Sepal Length (cm) plotted against Petal Width (cm) (*n =* 150) for three different species  *Iris setosa, versicolor* and *virginica* dataset in R. Black line represents a linear model of 
 
+this was written on the terminal
